@@ -1,0 +1,8 @@
+-- need code for a database that holds cars
+-- needs 10 ish cars for a drop down that will look like this
+-- YEAR - Make - Model - enter button
+-- info for cars, year, make, model, mpg, tank size
+-- we will call the database to fill dropdown and pull into for calculations
+
+
+-- also, wouldnt mind a little table that had diffrent gas prices buttt not top prority
