@@ -1,4 +1,4 @@
-package com.example.finalproject;
+package com.example.final2;
 //this page can be the home page that sets everything up for home
 
 import java.io.*;
@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 @WebServlet(name = "Home", value = "/home")
 
-public class homePage extends HttpServlet {
+public class Homepage extends HttpServlet {
     private String message;
     public void init() {
         message = "Enter your cars information";
@@ -22,6 +22,7 @@ public class homePage extends HttpServlet {
 //medium -*preferd* - use a google map tool and figure it out
     
  public static void main(String[] args) {
+
         int mpg = 25;//miles per gal    *****from database***
         int tankSize = 10;//tank size   *****from database***
         int maxMillage = mpg * tankSize;// max milage of car
@@ -31,15 +32,20 @@ public class homePage extends HttpServlet {
         int gasPrice =3; //gas price
         int totalcost = gasNeed * gasPrice; //total trip cost
         System.out.println(" You need $" + totalcost + " and "+gasNeed +" gallons for the trip");
-    }
+
 }
 
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        Database.init();
+
+        Car test = Database.getCarFromDatabase("Ford","Fusion",2006);
+
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
+        out.println("<h1>" + test.toString() + "</h1>");
         out.println("</body></html>");
     }
     public void destroy() {
