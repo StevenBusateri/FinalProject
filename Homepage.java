@@ -20,19 +20,19 @@ public class homePage extends HttpServlet {
 // need to find out how far the location is
 //(easy- prompt the user how many miles are you going to travel)
 //medium -*preferd* - use a google map tool and figure it out
-
-        private int totalCost () {
+    
+ public static void main(String[] args) {
         int mpg = 25;//miles per gal    *****from database***
         int tankSize = 10;//tank size   *****from database***
-        int maxMillage = mpg*tankSize;// max milage of car
+        int maxMillage = mpg * tankSize;// max milage of car
         int tripDistance = 1000; //total trip distance    *****from above***
         int tankNeed = tripDistance/maxMillage;//tanks needed/ stops
         int gasNeed = tankNeed * tankSize;// gas needed
         int gasPrice =3; //gas price
         int totalcost = gasNeed * gasPrice; //total trip cost
-        System.out.println(totalcost);
-        return totalcost;
+        System.out.println(" You need $" + totalcost + " and "+gasNeed +" gallons for the trip");
     }
+}
 
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
