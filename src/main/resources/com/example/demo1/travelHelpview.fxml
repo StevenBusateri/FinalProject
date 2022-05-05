@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.TextField?>
+<SplitPane fx:controller="com.example.demo1.travelHelpController" dividerPositions="0.12750716332378223" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="191.0" prefWidth="776.0" style="-fx-background-color: aqua;">
+            <children>
+                <Text layoutX="-12.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRAVEL HELP" textAlignment="CENTER" wrappingWidth="408.541015625">
+                    <font>
+                        <Font name="Tw Cen MT Condensed" size="80.0" />
+                    </font>
+                </Text>
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <SplitPane dividerPositions="0.3066132264529058" prefHeight="619.0" prefWidth="1000.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <TextField fx:id="startLoco" layoutX="22.0" layoutY="148.0" prefHeight="22.0" prefWidth="250.0" promptText="STARTING LOCATION" />
+                                <TextField fx:id="endLoco" layoutX="22.0" layoutY="196.0" prefHeight="30.0" prefWidth="250.0" promptText="ENDING LOCATION" />
+                                <Text layoutX="2.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WHERE YOU WOULD LIKE TO TRAVEL?" textAlignment="CENTER" wrappingWidth="294.0">
+                                    <font>
+                                        <Font name="Tw Cen MT Condensed Extra Bold" size="30.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="617.0" prefWidth="678.0">
+                            <children>
+                                <ComboBox fx:id="boxYear" onAction="#drop" layoutX="107.0" layoutY="83.0" prefHeight="40.0" prefWidth="476.0" promptText="YEAR" style="-fx-background-color: aqua; -fx-border-color: black; -fx-border-width: 2;" />
+                                <ComboBox fx:id="boxMake" layoutX="107.0" layoutY="141.0" prefHeight="40.0" prefWidth="476.0" promptText="MAKE" style="-fx-background-color: aqua; -fx-border-color: black; -fx-border-width: 2;" />
+                                <ComboBox fx:id="boxModel" layoutX="107.0" layoutY="202.0" prefHeight="40.0" prefWidth="476.0" promptText="MODEL" style="-fx-background-color: aqua; -fx-border-color: black; -fx-border-width: 2;" />
+                                <Text layoutX="149.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENTER YOUR CARS INFORMATION" textAlignment="CENTER" wrappingWidth="408.541015625">
+                                    <font>
+                                        <Font name="Tw Cen MT Condensed Extra Bold" size="30.0" />
+                                    </font>
+                                </Text>
+                                <Button onAction="#onHelloButtonClick" layoutX="295.0" layoutY="261.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: aqua; -fx-border-color: black; -fx-border-width: 2;" text="SUBMIT" textFill="#070707" />
+                                <Text fx:id="ymm" layoutX="14.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YEAR MAKE MODEL" wrappingWidth="408.541015625">
+                                    <font>
+                                        <Font name="Tw Cen MT Condensed Extra Bold" size="30.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="time" layoutX="14.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DISTANCE" wrappingWidth="408.541015625">
+                                    <font>
+                                        <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="stopCount" layoutX="14.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STOP COUNT" wrappingWidth="408.541015625">
+                                    <font>
+                                        <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="galCount" layoutX="14.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GALLON COUNT " wrappingWidth="408.541015625">
+                                    <font>
+                                        <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="cost" layoutX="14.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COST AMOUNT " wrappingWidth="408.541015625">
+                                    <font>
+                                        <Font name="Tw Cen MT Condensed Extra Bold" size="25.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+            </children></AnchorPane>
+    </items>
+</SplitPane>
